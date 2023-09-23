@@ -10,6 +10,7 @@ export class PrivatePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

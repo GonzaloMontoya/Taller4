@@ -10,6 +10,7 @@ import { RickmortyService } from './service/rickmorty.service';
 
 export class HomePage implements OnInit {
   personajes:any;
+  stateService: any;
   
   constructor
   ( private rickmortyservice: RickmortyService)
@@ -20,6 +21,7 @@ export class HomePage implements OnInit {
     this.rickmortyservice.getCharacters().subscribe((_personajes:any)=>{
       console.log(_personajes)
       this.personajes = _personajes.results;
+      this.stateService.setPersonajes(this.personajes);
     })
   }
 }
